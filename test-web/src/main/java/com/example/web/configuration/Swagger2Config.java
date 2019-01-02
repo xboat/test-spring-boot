@@ -1,7 +1,8 @@
 package com.example.web.configuration;
 
+import com.example.web.registrar.AbstractBeanRegistrar;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -13,18 +14,16 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * @author xboat date 2018-12-10
  */
-@Configuration
 @EnableSwagger2
-public class Swagger2Config {
-
+public class Swagger2Config extends AbstractBeanRegistrar {
     @Bean
     public Docket controllerApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
-                        .title("项目名称：swagger  接口")
-                        .description("描述：项目描述")
-                        .contact(new Contact("test", null, null))
-                        .version("版本号：1.0.0")
+                        .title(environment.getProperty("Swagger2Config.title"))
+                        .description(environment.getProperty("Swagger2Config.description"))
+                        .contact(new Contact(environment.getProperty("Swagger2Config.name"), null, null))
+                        .version(environment.getProperty("Swagger2Config.version"))
                         .build())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.example.web"))
@@ -32,4 +31,8 @@ public class Swagger2Config {
                 .build();
     }
 
+    @Override
+    public void registerBeans() {
+
+    }
 }
