@@ -11,6 +11,8 @@
     <modules>
         <module>test-web</module>
         <module>test-myBatis</module>
+        <module>test-logging</module>
+        <module>test-caching</module>
     </modules>
 
     <parent>
