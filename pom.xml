@@ -13,6 +13,7 @@
         <module>test-myBatis</module>
         <module>test-logging</module>
         <module>test-caching</module>
+        <module>test-config</module>
     </modules>
 
     <parent>

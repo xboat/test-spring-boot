@@ -1,0 +1,12 @@
+book:
+  name: java
+  page: 30
+  stauts: true
+  date: 2019/01/02
+  maps:
+    key1: test_09
+    key2: test_11
+  lists:
+    - a_key
+    - b_key
+  imageInfo: {height: 3, width: 12}
