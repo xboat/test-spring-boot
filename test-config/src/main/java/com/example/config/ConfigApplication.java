@@ -4,15 +4,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 /**
  * @author xboat date 2019-01-04
  */
+
+@EnableConfigurationProperties(value={UserConfig.class})
 @SpringBootApplication
 public class ConfigApplication implements CommandLineRunner {
 
     @Autowired
     private BookProperties bookProperties;
+
+    @Autowired
+    private UserConfig testConfig;
+
     public static void main(String[] args){
         SpringApplication.run(ConfigApplication.class, args);
         System.out.println("<---start config---->");
@@ -28,5 +35,7 @@ public class ConfigApplication implements CommandLineRunner {
         System.out.println("list--->"+bookProperties.getLists().get(0));
         System.out.println("maps--->"+bookProperties.getMaps().get("key1"));
         System.out.println("height--->"+bookProperties.getImageInfo().getHeight());
+        System.out.println("user--->"+testConfig.getAccount());
+
     }
 }
