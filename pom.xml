@@ -17,6 +17,7 @@
         <module>test-threading</module>
         <module>test-hystrix</module>
         <module>test-shardingjdbc</module>
+        <module>test-elasticsearch</module>
     </modules>
 
     <parent>
