@@ -19,6 +19,10 @@
         <module>test-shardingjdbc</module>
         <module>test-elasticsearch</module>
         <module>test-dubbo</module>
+        <module>test-security</module>
+        <module>test-events</module>
+        <module>test-actuator</module>
+        <module>test-starter</module>
     </modules>
 
     <parent>
