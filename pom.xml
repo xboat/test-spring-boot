@@ -24,6 +24,7 @@
         <module>test-actuator</module>
         <module>test-starter</module>
         <module>test-thymeleaf</module>
+        <module>test-jwt</module>
     </modules>
 
     <parent>
