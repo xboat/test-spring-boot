@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/style.css}"></link>
+    <title th:text="${blogPost.title}"></title>
+</head>
+<body>
+<h2 th:text="${blogPost.title}"></h2>
+<div  th:object="${blogPost}">
+    <span th:text="*{title}"></span>
+    <br/>
+    <span th:text="*{body}"></span>
+
+    <span th:field="*{title}"></span>
+
+    <span th:text="${blogPost.body}"></span>
+
+</div>
+<br/>
+<div th:include="footer :: copyright"></div>
+</body>
+</html>

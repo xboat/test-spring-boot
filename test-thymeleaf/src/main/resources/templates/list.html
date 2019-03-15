@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/style.css}"></link>
+    <title>我的博客</title>
+</head>
+<body>
+<div class="list">
+    <ul th:each="item:${blogPosts}">
+        <li>
+            <a th:href="@{'/detail/'+${item.id}}">
+                <span th:text="${item.id}"></span>#<span th:text="${item.title}"></span>#
+                <span th:text="${#dates.format(item.createdAt, 'yyyy-MM-dd hh:mm:ss')}"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+<br/>
+<div th:include="footer :: copyright"></div>
+</body>
+</html> 
