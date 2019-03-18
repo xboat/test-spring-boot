@@ -25,6 +25,7 @@
         <module>test-starter</module>
         <module>test-thymeleaf</module>
         <module>test-jwt</module>
+        <module>test-netty</module>
     </modules>
 
     <parent>
