@@ -1,0 +1,1 @@
+User.Service=com.example.resource.UserService

@@ -28,6 +28,7 @@
         <module>test-netty</module>
         <module>test-schedule</module>
         <module>test-cglib</module>
+        <module>test-resource</module>
     </modules>
 
     <parent>
